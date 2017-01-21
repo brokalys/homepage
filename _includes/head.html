@@ -3,18 +3,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="Matīss Jānis Āboltiņš || mja.lv">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <!-- Bootstrap Core CSS -->
-    <!-- <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" type="text/css"> -->
-
     <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato|Muli|Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <!-- Plugin CSS -->
     <!-- <link rel="stylesheet" href="/css/animate.min.css" type="text/css"> -->
@@ -42,10 +38,5 @@
         });
     </script>
     {% endif %}
-
-    {% if site.addthis_id %}
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_id }}"></script>
-      {% endif %}
 
 </head>
