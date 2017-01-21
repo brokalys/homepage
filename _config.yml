@@ -32,7 +32,6 @@ highlighter: rouge
 permalink: pretty
 paginate: 5
 exclude:
-  - less
   - node_modules
   - Gemfile
   - Gemfile.lock
@@ -43,4 +42,3 @@ exclude:
 
 gems: 
   - jekyll-paginate
-  - jekyll-less

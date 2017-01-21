@@ -1,5 +1,10 @@
 require "rubygems"
 
+task :default do 
+  puts "# Available tasks:"
+  system "rake -P"
+end
+
 task :publish do
   puts "## Deploying to Github Pages"
 
