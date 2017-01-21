@@ -9,9 +9,13 @@
     "bootstrap-sass": "^3.3.6",
     "browser-sync": "^2.13.0",
     "font-awesome": "^4.6.3",
+    "gh-pages": "^0.12.0",
     "jquery": "^1.11.3"
   },
   "dependencies": {
     "simple-line-icons": "^2.3.2"
+  },
+  "scripts": {
+    "publish": "node publish.js"
   }
 }

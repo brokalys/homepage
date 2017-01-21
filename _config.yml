@@ -34,11 +34,13 @@ paginate: 5
 exclude:
   - less
   - node_modules
-  - Gruntfile.js
+  - Gemfile
+  - Gemfile.lock
   - package.json
+  - publish.js
   - README.md
+  - Rakefile
 
 gems: 
   - jekyll-paginate
-  - jekyll-feed
   - jekyll-less

@@ -1,22 +1,27 @@
 require "rubygems"
 
-desc "Deploy to Github Pages"
-task :deploy do
+task :publish do
   puts "## Deploying to Github Pages"
 
   puts "## Generating site"
-  system "grunt build"
+  system "bundle exec jekyll build"
 
-  cd "_site" do
-    system "git add -A"
+  puts "## Publishing to gh-page branch"
+  system "npm run publish"
 
-    message = "Site updated at #{Time.now.utc}"
-    puts "## Commiting: #{message}"
-    system "git commit -m \"#{message}\""
+  puts "## Publishing finished"
+end
 
-    puts "## Pushing generated site"
-    system "git push"
+task :serve do
+  system "bundle exec jekyll serve"
+end
 
-    puts "## Deploy Complete!"
-  end
+task :install do
+  system "npm install"
+  system "bundle install"
+end
+
+task :update do
+  system "npm update"
+  system "bundle update"
 end
