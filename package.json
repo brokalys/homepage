@@ -1,0 +1,17 @@
+{
+  "name": "new-age",
+  "title": "New Age",
+  "version": "3.3.7",
+  "homepage": "http://startbootstrap.com/template-overviews/new-age",
+  "author": "Start Bootstrap",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
+    "jquery": "^1.11.3"
+  },
+  "dependencies": {
+    "simple-line-icons": "^2.3.2"
+  }
+}
