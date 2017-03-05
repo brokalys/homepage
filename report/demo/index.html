@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Digitālais nekustamā īpašuma brokeris">
+    <meta name="author" content="Matīss Jānis Āboltiņš || mja.lv">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+
+    <title>Demo</title>
+
+    <!-- Custom Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato|Muli|Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <!-- <link rel="stylesheet" href="/css/animate.min.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Google ADS mobile block -->
+    
+
+    <base href="/">
+</head>
+
+
+<body id="page-top">
+  <div class="container">
+	<div class="row">
+    <div class="col-sm-8">
+        <div id="map" style="height:300px"></div>
+    </div>
+
+    <div class="col-sm-4">
+        <div id="main" style="height:400px;"></div>
+    </div>
+</div>
+
+
+<script src="//maps.google.com/maps/api/js?sensor=true"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.min.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+    $(function () {
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // specify chart configuration item and data
+        var option = {
+            title: {
+                text: 'ECharts entry example'
+            },
+            tooltip: {},
+            legend: {
+                data:['Sales']
+            },
+            xAxis: {
+                data: ["shirt","cardign","chiffon shirt","pants","heels","socks"]
+            },
+            yAxis: {},
+            series: [{
+                name: 'Sales',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+    });
+
+    var map;
+    $(document).ready(function(){
+      map = new GMaps({
+        div: '#map',
+        lat: -12.043333,
+        lng: -77.028333
+      });
+      map.addMarker({
+        lat: -12.043333,
+        lng: -77.03,
+        title: 'Lima',
+        details: {
+          database_id: 42,
+          author: 'HPNeo'
+        },
+        click: function(e){
+          if(console.log)
+            console.log(e);
+          alert('You clicked in this marker');
+        }
+      });
+      map.addMarker({
+        lat: -12.042,
+        lng: -77.028333,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<p>HTML Content</p>'
+        }
+      });
+    });
+});
+</script>
+
+</div>
+
+  <footer>
+    <div class="container">
+        <p>&copy; 2017 Brokalys.com. All Rights Reserved.</p>
+    </div>
+</footer>
+
+  <!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/js/jquery.fittext.js"></script>
+<script src="/js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/creative.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.4.0/echarts.min.js"></script>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24636123-15']);
+          _gaq.push(['_trackPageview']);
+  (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</body>
+
+</html>
