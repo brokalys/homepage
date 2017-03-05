@@ -163,6 +163,35 @@ header {
   background: url("../img/bg-pattern.png"), linear-gradient(to left, $head-primary, $head-secondary);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
+
+  &.buy {
+    background: url("../img/people.jpg"), $head-primary;
+    /* fallback for old browsers */
+    background: url("../img/people.jpg"), -webkit-linear-gradient(to left, $head-primary, $head-secondary);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: url("../img/people.jpg"), linear-gradient(to left, $head-primary, $head-secondary);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 10;
+    }
+  }
+
   .header-content {
     text-align: center;
     padding: 150px 0 50px;
@@ -238,6 +267,10 @@ section {
     h2 {
       margin-top: 0;
       font-size: 50px;
+      text-shadow: 0px 0px 1px black;
+    }
+    p {
+      text-shadow: 0px 0px 1px black;
     }
     .badges .badge-link {
       display: block;
@@ -299,7 +332,7 @@ section {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    background-image: url('../img/bg-cta.jpg');
+    background-image: url('../img/house-2.jpg');
     padding: 250px 0;
     .cta-content {
       position: relative;
@@ -308,7 +341,7 @@ section {
         margin-top: 0;
         margin-bottom: 25px;
         color: white;
-        max-width: 450px;
+        max-width: 550px;
         font-size: 50px;
       }
     }
@@ -423,7 +456,7 @@ section {
 
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 
