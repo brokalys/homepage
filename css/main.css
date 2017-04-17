@@ -63,6 +63,10 @@ p { margin: 0 0 10px; }
 
 .bg-primary { background-color: #337ab7; }
 
+ul { margin-top: 0; margin-bottom: 10px; }
+
+.list-unstyled { padding-left: 0; list-style: none; }
+
 .container { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; }
 .container:before, .container:after { content: " "; display: table; }
 .container:after { clear: both; }
