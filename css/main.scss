@@ -5,12 +5,12 @@
 // variables.less link and gradient background
 $head-primary: #7b4397 ;
 $head-secondary: #dc2430 ;
-$theme-primary: #fdcc52 ;
+$theme-primary: #e6a503 ;
 $theme-secondary: #fdc539 ;
 $theme-dark: #222;
 
 @import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
- 
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "mixins",

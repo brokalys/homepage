@@ -26,9 +26,9 @@ body {
 }
 
 a {
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: background 0.35s;
+  -moz-transition: background 0.35s;
+  transition: background 0.35s;
   color: $theme-primary;
   &:hover, &:focus {
     color: #fcbd20;
@@ -226,11 +226,10 @@ header {
 
 @media (min-width: 768px) {
   header {
-    min-height: 100%;
     .header-content {
       text-align: left;
       padding: 0;
-      height: 100vh;
+      height: 90vh;
       .header-content-inner {
         max-width: none;
         margin: 0;
@@ -267,10 +266,6 @@ section {
     h2 {
       margin-top: 0;
       font-size: 50px;
-      text-shadow: 0px 0px 1px black;
-    }
-    p {
-      text-shadow: 0px 0px 1px black;
     }
     .badges .badge-link {
       display: block;
