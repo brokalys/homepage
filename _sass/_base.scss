@@ -229,7 +229,7 @@ header {
     .header-content {
       text-align: left;
       padding: 0;
-      height: 90vh;
+      height: 100vh;
       .header-content-inner {
         max-width: none;
         margin: 0;
@@ -246,6 +246,10 @@ header {
       max-height: calc(0vh);
       margin: 100px auto 0;
     }
+  }
+
+  .about header .header-content {
+    height: 80vh;
   }
 }
 
@@ -265,7 +269,8 @@ section {
     position: relative;
     h2 {
       margin-top: 0;
-      font-size: 50px;
+      font-size: 30px;
+      margin-bottom: 30px;
     }
     .badges .badge-link {
       display: block;
@@ -431,7 +436,7 @@ section {
 
 @media (min-width: 768px) {
   section.download h2 {
-    font-size: 70px;
+    font-size: 55px;
   }
 }
 

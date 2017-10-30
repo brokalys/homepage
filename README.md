@@ -1,15 +1,16 @@
 ## Installation
-```
-$ rake install
+```sh
+rake install
+bundle install
 ```
 
 ## Usage
 ### Development
-```
-$ rake serve
+```sh
+rake serve
 ```
 
 ### Deployment
-```
-$ rake publish
+```sh
+rake publish
 ```

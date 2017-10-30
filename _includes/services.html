@@ -3,35 +3,71 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="section-heading">
-                    <h2>Vienkārša izmantošana</h2>
-                    <p class="text-muted">Iegūsti individualizētu tirgus analīzi dažu minūšu laikā!</p>
-                    <hr>
+                    <h2>Reāllaika īpašumu tirgus analīzes rīks</h2>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-4">
-                <div class="feature-item">
-                    <i class="icon-mouse text-primary"></i>
-                    <h3>1. Ievadi vai izvēlies adresi</h3>
-                    <p class="text-muted">Brokalys veiks tirgus un šī īpašuma adresi.</p>
-                </div>
+            <div class="col-md-6">
+                <div id="container" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
             </div>
-            <div class="col-md-4">
-                <div class="feature-item">
-                    <i class="icon-graph text-primary"></i>
-                    <h3>2. Izpēti tirgus analīzi</h3>
-                    <p class="text-muted">Šī informācija tiek salīdzināta ar visu Brokalys datubāzi un tiek izveidota individualizēta tirgus analīze.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-item">
-                    <i class="icon-rocket text-primary"></i>
-                    <h3>3. Pērc/pārdod</h3>
-                    <p class="text-muted">Esi informēts par tirgus stāvokli un pieņem pelnošus lēmumus.</p>
-                </div>
+            <div class="col-md-6">
+                <p>Brokalys pēdējo 3 gadu laikā ir ievācis un sastrukturējis informāciju par vairāk nekā 350`000 īpašumu. Šie dati tiek grupēti un attēloti lietotāja izvēlētos reģionos un attēloti saprotamā veidā. Tas palīdz pieņemt racionālus, uz datiem balstītus lēmumus par konkrētā brīža nekustamā īpašuma vērtību un nākotnes tendencēm tirgū.</p>
             </div>
         </div>
     </div>
 </section>
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script>
+    Highcharts.chart('container', {
+    chart: {
+        type: 'areaspline'
+    },
+    title: {
+        text: 'Vidējā dzīvokļu cena Ziepniekkalnā un Agenskalnā Q2 - Q3  2017'
+    },
+    xAxis: {
+        categories: [
+            'Aprīlis',
+            'Maijs',
+            'Jūnijs',
+            'Jūlijs',
+            'Augusts',
+            'Septembris'
+        ],
+        plotBands: [{ // visualize the weekend
+            from: 10000,
+            to: 175000,
+            color: 'rgba(68, 170, 213, .2)'
+        }]
+    },
+    yAxis: {
+        title: {
+            text: 'Vidējā cena'
+        }
+    },
+    tooltip: {
+        shared: true,
+        valueSuffix: ' EUR'
+    },
+    credits: {
+        enabled: false
+    },
+    plotOptions: {
+        areaspline: {
+            fillOpacity: 0.5
+        }
+    },
+    series: [{
+        name: 'Āgenskalns',
+        data: [133884, 133585, 117197, 104862, 125595, 166514]
+    }, {
+        name: 'Ziepniekkalns',
+        data: [67410, 80279, 63084, 64955, 66377, 78878]
+    }]
+});
+</script>
