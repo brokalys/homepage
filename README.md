@@ -1,7 +1,6 @@
 ## Installation
 ```sh
 rake install
-bundle install
 ```
 
 ## Usage
